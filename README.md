@@ -53,7 +53,14 @@ OpenLightswitch-HA is an open-source hardware project that uses an Arduino Uno W
 
 ## Home Assistant Configuration
 
-Add the following YAML to your `configuration.yaml`:
+To integrate the OpenLightswitch-HA into Home Assistant, you need to make sure your Home Assistant instance has MQTT properly set up. This means:
+
+1. An MQTT broker (e.g. Mosquitto) is installed and running.
+2. The broker is reachable from both Home Assistant and your Arduino device.
+3. The Arduino is configured with the same credentials and IP address as used by the broker.
+4. Home Assistant has MQTT integration enabled (either via the UI or `configuration.yaml`).
+
+Once your MQTT broker is ready, add the following configuration to your `configuration.yaml` file:
 
 ```yaml
 mqtt:
@@ -71,7 +78,25 @@ mqtt:
       retain: false
 ```
 
-> Ensure MQTT is properly configured in Home Assistant and that the Arduino has network access.
+### Explanation of Parameters:
+
+* **name**: The user-visible name in the Home Assistant dashboard.
+* **unique\_id**: A unique identifier to ensure the device does not conflict with other entities.
+* **command\_topic**: Topic that Home Assistant sends commands to.
+* **state\_topic**: Topic from which Home Assistant reads the actual device state.
+* **payload\_on / payload\_off**: Commands sent to the Arduino.
+* **state\_on / state\_off**: Expected payloads reported by the Arduino.
+* **optimistic**: Set to false because the Arduino reports back its state.
+* **qos**: Use 1 for reliable delivery.
+* **retain**: Set to false to avoid retaining stale commands.
+
+### Optional: UI Integration
+
+After restarting Home Assistant, the switch should automatically appear in the UI. If it doesn’t, go to *Settings > Devices & Services > MQTT* and check if the device is listed under discovered entities. You can also manually add it to a dashboard via *Settings > Dashboards*.
+
+> ✅ Tip: You can test the setup by toggling the switch in the Home Assistant UI and verifying the Arduino responds with a tap movement and updates the state accordingly.
+
+> ⚠️ Make sure your Home Assistant and Arduino are on the same network segment and your MQTT topics match exactly.
 
 ---
 
