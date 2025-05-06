@@ -20,7 +20,7 @@ OpenLightswitch-HA is an open-source hardware project that uses an Arduino Uno W
 * SG90 Micro Servo
 * Capacitive Touch Sensor (e.g., TTP223)
 * USB Power Supply (or 5V adapter)
-* 3D-printed bracket and servo arm (STL files in `/hardware/`)
+* 3D-printed bracket and servo arm STL files in [STLs](https://github.com/makerLab314/OpenLightswitch-HA/tree/main/STLs)
 * Jumper wires and optional mounting adhesive or tape
 
 ---
