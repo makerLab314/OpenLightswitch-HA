@@ -99,19 +99,44 @@ After restarting Home Assistant, the switch should automatically appear in the U
 > ⚠️ Make sure your Home Assistant and Arduino are on the same network segment and your MQTT topics match exactly.
 
 ---
+## Hardware Assembly
 
-## Assembly Instructions
+The OpenLightswitch-HA system was designed to be non-invasive and easy to install on standard European light switches.
 
-1. Print the provided STL files located in the `/hardware/` folder.
-2. Mount the SG90 servo into the bracket.
-3. Attach the arm to the servo horn and align it with your light switch paddle.
-4. Use double-sided tape or another non-permanent adhesive to mount the unit over the switch.
-5. Connect components as follows:
+### Components Required:
 
-   * Servo signal to pin 9
-   * Touch sensor output to pin 2
-   * Power all components from 5V and GND
-6. Power the device via USB or stable 5V supply.
+* Arduino Uno WiFi Rev2
+* SG90 Micro Servo
+* Capacitive touch sensor (e.g. TTP223)
+* 3D-printed mounting bracket (custom-designed for EU switch frames)
+* USB power supply (or equivalent stable 5V source)
+* Jumper wires
+* A M2x25 screw
+
+### Assembly Instructions:
+
+1. **Print the 3D Bracket**
+
+   * Use the provided STL (3mf) files.
+   * The bracket is designed to fit under the plastic frame of standard European light switches without damaging the wall or switch.
+   * Make sure the print has enough infill to stay rigid under servo force.
+
+2. **Install the Bracket**
+
+   * Carefully remove the frame of your light switch (no tools required for most EU models).
+   * Insert the 3D bracket under the frame and reattach the frame to hold the mount in place.
+   * The servo arm should align with the light switch rocker so that it can tap either side.
+
+3. **Attach Components**
+
+   * Mount the SG90 servo onto the bracket using a M2x25 screw.
+   * Connect the servo to pin 9 of the Arduino.
+   * Connect the touch sensor to pin 2 of the Arduino.
+   * Power the Arduino via USB or a stable 5V source.
+
+> 🛠️ Make sure the servo has room to move the rocker switch in both directions. You may need to adjust the angle or bracket position slightly depending on your specific switch model.
+
+> 💡 The design is reversible and requires no screws or adhesives on the wall, making it renter-friendly and easy to relocate.
 
 ---
 
