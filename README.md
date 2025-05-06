@@ -98,28 +98,7 @@ mqtt:
 
 ---
 
-## Firmware
-
-Full source code is in the `/firmware/` folder. Paste it directly into the Arduino IDE or upload the `.ino` file.
-
----
-
-## TODOs / Future Improvements
-
-* Add support for OTA firmware updates
-* Allow calibration of servo angle via MQTT
-* Support alternative switch layouts (e.g. double or toggle switches)
-
----
-
 ## License
 
 This project is licensed under the MIT License. See `LICENSE` file for details.
 
----
-
-## Credits
-
-* Hardware design and 3D parts: -\[Insert names or GitHub handles]-
-* Firmware development: -\[Insert names]-
-* Documentation: -\[Insert names]-
