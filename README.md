@@ -150,5 +150,5 @@ The OpenLightswitch-HA system was designed to be non-invasive and easy to instal
 
 ## License
 
-This project is licensed under the MIT License. See `LICENSE` file for details.
+This project is licensed under the GNU GPL v3 License. See `LICENSE` file for details.
 
