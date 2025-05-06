@@ -33,7 +33,7 @@ OpenLightswitch-HA is an open-source hardware project that uses an Arduino Uno W
    * ArduinoMqttClient
    * Servo
 
-2. Paste the firmware code [Firmware]:[https://github.com/makerLab314/OpenLightswitch-HA/blob/main/Lichtschalter_FINAL.ino] folder or from the code section below into a new sketch.
+2. Paste the firmware code [Firmware][https://github.com/makerLab314/OpenLightswitch-HA/blob/main/Lichtschalter_FINAL.ino] folder or from the code section below into a new sketch.
 
 3. Modify these configuration values:
 
